@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Øvelse1</title>
+    <link rel="stylesheet" href="java.js">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="grid">
+            <img id="snaps" src="billeder/snaps.jpg" alt="snaps">
+            <img id="øl" src="billeder/øl.jpg" alt="øl">
+            <img id="sodavand1" src="billeder/sodavand1.webp" alt="sodavand1">
+            <img id="sodavand2" src="billeder/sodavand2.webp" alt="sodavand2">
+        </div>
+    </main>
+
+    <script>
+        const snaps = document.querySelector("#snaps");
+        snaps.addEventListener("click", tjek);
+
+        document.querySelector("#sodavand1").addEventListener("click", tjek);
+        document.querySelector("#sodavand2").addEventListener("click", tjek);
+        document.querySelector("#øl").addEventListener("click", tjek);
+
+        function tjek() {
+            console.log(this.alt);
+            if (this.alt == "øl" || this.alt == "snaps") {
+                console.log("indeholder alkohol");
+            } else {
+                console.log("alkoholfri");
+            }
+        }
+    </script>
+</body>
+
+
+</html>
